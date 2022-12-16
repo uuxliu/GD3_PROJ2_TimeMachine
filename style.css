@@ -1,0 +1,936 @@
+* {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	cursor: crosshair;
+}
+
+/* Scrollbar */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #ffaa00 #ff4040;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 13px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ff4040;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #ffaa00;
+    border-radius: 15px;
+    border: 2px dotted #ff4040;
+  }
+
+/* background animation */
+@keyframes twinkle-action {
+	from {background-position: 0 0;}
+	to {background-position: -10000px 5000px;}
+}
+
+/* background stuff */
+.stars, .twinkle {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+	overflow: hidden;
+}
+
+.stars {
+	background: url(stars.jpg) repeat top center;
+	z-index: 0;
+}
+
+.twinkle {
+	background: transparent url(twinkle.png) repeat top center;
+	z-index: 2;
+	animation: twinkle-action 350s linear infinite;
+}
+
+img {
+	position: fixed;
+	max-width: 150px;
+	max-height: auto;
+	z-index: 1;
+	cursor: pointer;
+	overflow: visible;
+}
+
+@keyframes line-action {
+	100% {
+		opacity: 1;
+	}
+}
+
+/* aries */
+.aries-dot, .aries-line {
+	position: fixed;
+	z-index: 1;
+	top: 100px;
+	left: 100px;
+}
+
+.aries-line {
+	z-index: 2;
+	opacity: 0;
+}
+
+.aries-line:hover {
+	animation: line-action 1s ease-in ;
+	animation-fill-mode: forwards;
+}
+
+/* taurus */
+.taurus-dot, .taurus-line {
+	position: fixed;
+	z-index: 1;
+	top: 540px;
+	left: 270px;
+}
+
+.taurus-line {
+	z-index: 2;
+	opacity: 0;
+}
+
+.taurus-line:hover {
+	animation: line-action 1s ease-in ;
+	animation-fill-mode: forwards;
+}
+
+/* gemini */
+.gemini-dot, .gemini-line {
+	position: fixed;
+	z-index: 1;
+	top: 700px;
+	left: 120px;
+}
+
+.gemini-line{
+	z-index: 2;
+	opacity: 0;
+}
+
+.gemini-line:hover {
+	animation: line-action 1s ease-in ;
+	animation-fill-mode: forwards;
+}
+
+/* cancer */
+.cancer-dot, .cancer-line {
+	position: fixed;
+	z-index: 1;
+	top: 375px;
+	left: 25px;
+}
+
+.cancer-line{
+	z-index: 2;
+	opacity: 0;
+}
+
+.cancer-line:hover {
+	animation: line-action 1s ease-in ;
+	animation-fill-mode: forwards;
+}
+
+/* leo */
+.leo-dot, .leo-line {
+	position: fixed;
+	z-index: 1;
+	top: 50px;
+	left: 540px;
+}
+
+.leo-line{
+	z-index: 2;
+	opacity: 0;
+}
+
+.leo-line:hover {
+	animation: line-action 1s ease-in ;
+	animation-fill-mode: forwards;
+}
+
+/* virgo */
+.virgo-dot, .virgo-line {
+	position: fixed;
+	z-index: 1;
+	top: 500px;
+	left: 800px;
+}
+
+.virgo-line {
+	z-index: 2;
+	opacity: 0;
+}
+
+.virgo-line:hover {
+	animation: line-action 1s ease-in ;
+	animation-fill-mode: forwards;
+}
+
+/* libra */
+.libra-dot, .libra-line {
+	position: fixed;
+	z-index: 1;
+	top: 740px;
+	left: 600px;
+}
+
+.libra-line{
+	z-index: 2;
+	opacity: 0;
+}
+
+.libra-line:hover {
+	animation: line-action 1s ease-in ;
+	animation-fill-mode: forwards;
+}
+
+/* scorpio */
+.scorpio-dot, .scorpio-line {
+	position: fixed;
+	z-index: 1;
+	top: 210px;
+	left: 345px;
+}
+
+.scorpio-line{
+	z-index: 2;
+	opacity: 0;
+}
+
+.scorpio-line:hover {
+	animation: line-action 1s ease-in ;
+	animation-fill-mode: forwards;
+}
+
+/* ophiuchus */
+.ophiuchus-dot, .ophiuchus-line {
+	position: fixed;
+	z-index: 1;
+	top: 480px;
+	left: 520px;
+}
+
+.ophiuchus-line{
+	z-index: 2;
+	opacity: 0;
+}
+
+.ophiuchus-line:hover {
+	animation: line-action 1s ease-in ;
+	animation-fill-mode: forwards;
+}
+
+/* sagittarius */
+.sagittarius-dot, .sagittarius-line {
+	position: fixed;
+	z-index: 1;
+	top: 670px;
+	left: 950px;
+}
+
+.sagittarius-line{
+	z-index: 2;
+	opacity: 0;
+}
+
+.sagittarius-line:hover {
+	animation: line-action 1s ease-in ;
+	animation-fill-mode: forwards;
+}
+
+/* capricorn */
+.capricorn-dot, .capricorn-line {
+	position: fixed;
+	z-index: 1;
+	top: 260px;
+	left: 680px;
+}
+
+.capricorn-line{
+	z-index: 2;
+	opacity: 0;
+}
+
+.capricorn-line:hover {
+	animation: line-action 1s ease-in ;
+	animation-fill-mode: forwards;
+}
+
+/* aquarius */
+.aquarius-dot, .aquarius-line {
+	position: fixed;
+	z-index: 1;
+	top: 360px;
+	left: 990px;
+}
+
+.aquarius-line{
+	z-index: 2;
+	opacity: 0;
+}
+
+.aquarius-line:hover {
+	animation: line-action 1s ease-in ;
+	animation-fill-mode: forwards;
+}
+
+/* pisces */
+.pisces-dot, .pisces-line {
+	position: fixed;
+	z-index: 1;
+	top: 95px;
+	left: 920px;
+}
+
+.pisces-line{
+	z-index: 2;
+	opacity: 0;
+}
+
+.pisces-line:hover {
+	animation: line-action 1s ease-in ;
+	animation-fill-mode: forwards;
+}
+
+/* title modal */
+.modal-window {
+  	position: fixed;
+  	background-color: transparent;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 5;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 1s;
+}
+
+.modal-window:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-window-div {
+    width: 400px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    background: white;
+    overflow-y: visible;
+}
+
+.modal-close {
+	color: black;
+	line-height: 50px;
+	font-size: 80% bold;
+	position: fixed;
+	right: 0;
+	text-align: center;
+	top: 0;
+	width: 70px;
+	text-decoration: none;
+}
+
+.modal-close:hover {
+	color: black;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+body {
+	font-family: 'Helvetica', 'Arial';
+	font-size: 18px;
+	line-height: 1.4;
+  	height: 100%;
+}
+
+a {
+	font-family: 'Press Start 2P';
+	font-size: 25px;
+	color: white;
+}
+
+a:hover {
+  	text-decoration: underline;
+}
+
+.container {
+	display: grid;
+  	justify-content: center;
+  	align-items: end;
+  	height: 50vh;
+}
+
+.modal-window {
+    border-radius: 1rem;
+  }
+
+.btn {
+  	background-color: transparent;
+  	padding: 1em 1.5em;
+  	border-radius: 0.5rem;
+  	text-decoration: none;
+  	z-index: 2;
+  	top: 100px;
+}
+
+.btn:hover {
+	cursor: help;
+}
+
+h1 {
+	font-family: 'Helvetica', 'Arial';
+	font-size: 15px;
+	color: #FFAA00;
+	float: left;
+}
+
+p {
+	font-size: 18px;
+	color: black;
+	float: left;
+}
+
+li {
+	font-size: 14px;
+	color: white;
+	float: left;
+}
+
+/* aries modal */
+
+#aries-open-modal .modal-close {
+	color: white;
+	cursor: crosshair;
+}
+
+#aries-open-modal .modal-close:hover {
+	color: white;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#aries-open-modal p {
+	color: white;
+	font-family: 'Helvetica', 'Arial';
+	font-size: 14px;
+	float: center;
+}
+
+#aries-open-modal .modal-window-div {
+    width: 400px;
+    height: 425px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    background: black;
+    overflow-y: visible;
+}
+
+#aries-open-modal object {
+	display: grid;
+	float: center;
+	width: 400px;
+	height: auto;
+	z-index: 5;
+}
+
+/* taurus modal */
+
+#taurus-open-modal .modal-close {
+	color: white;
+	cursor: crosshair;
+}
+
+#taurus-open-modal .modal-close:hover {
+	color: white;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#taurus-open-modal p {
+	color: white;
+	font-family: 'Helvetica', 'Arial';
+	font-size: 14px;
+	float: center;
+}
+
+#taurus-open-modal .modal-window-div {
+    width: 400px;
+    height: 400px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    background: black;
+    overflow-y: visible;
+}
+
+#taurus-open-modal object {
+	display: grid;
+	float: center;
+	width: 400px;
+	height: auto;
+	z-index: 5;
+}
+
+/* gemini modal */
+
+#gemini-open-modal .modal-close {
+	color: white;
+	cursor: crosshair;
+}
+
+#gemini-open-modal .modal-close:hover {
+	color: white;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#gemini-open-modal p {
+	color: white;
+	font-family: 'Helvetica', 'Arial';
+	font-size: 14px;
+	float: center;
+}
+
+#gemini-open-modal .modal-window-div {
+    width: 400px;
+    height: 425px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    background: black;
+    overflow-y: visible;
+}
+
+#gemini-open-modal object {
+	display: grid;
+	float: center;
+	width: 400px;
+	height: auto;
+	z-index: 5;
+}
+
+/* cancer modal */
+
+#cancer-open-modal .modal-close {
+	color: white;
+	cursor: crosshair;
+}
+
+#cancer-open-modal .modal-close:hover {
+	color: white;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#cancer-open-modal p {
+	color: white;
+	font-family: 'Helvetica', 'Arial';
+	font-size: 14px;
+	float: center;
+}
+
+#cancer-open-modal .modal-window-div {
+    width: 400px;
+    height: 425px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    background: black;
+    overflow-y: visible;
+}
+
+#cancer-open-modal object {
+	display: grid;
+	float: center;
+	width: 400px;
+	height: auto;
+	z-index: 5;
+}
+
+/* leo modal */
+
+#leo-open-modal .modal-close {
+	color: white;
+	cursor: crosshair;
+}
+
+#leo-open-modal .modal-close:hover {
+	color: white;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#leo-open-modal p {
+	color: white;
+	font-family: 'Helvetica', 'Arial';
+	font-size: 14px;
+	float: center;
+}
+
+#leo-open-modal .modal-window-div {
+    width: 400px;
+    height: 425px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    background: black;
+    overflow-y: visible;
+}
+
+#leo-open-modal object {
+	display: grid;
+	float: center;
+	width: 400px;
+	height: auto;
+	z-index: 5;
+}
+
+/* virgo modal */
+
+#virgo-open-modal .modal-close {
+	color: white;
+	cursor: crosshair;
+}
+
+#virgo-open-modal .modal-close:hover {
+	color: white;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#virgo-open-modal p {
+	color: white;
+	font-family: 'Helvetica', 'Arial';
+	font-size: 14px;
+	float: center;
+}
+
+#virgo-open-modal .modal-window-div {
+    width: 400px;
+    height: 425px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    background: black;
+    overflow-y: visible;
+}
+
+#virgo-open-modal object {
+	display: grid;
+	float: center;
+	width: 400px;
+	height: auto;
+	z-index: 5;
+}
+
+/* libra modal */
+
+#libra-open-modal .modal-close {
+	color: white;
+	cursor: crosshair;
+}
+
+#libra-open-modal .modal-close:hover {
+	color: white;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#libra-open-modal p {
+	color: white;
+	font-family: 'Helvetica', 'Arial';
+	font-size: 14px;
+	float: center;
+}
+
+#libra-open-modal .modal-window-div {
+    width: 400px;
+    height: 425px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    background: black;
+    overflow-y: visible;
+}
+
+#libra-open-modal object {
+	display: grid;
+	float: center;
+	width: 400px;
+	height: auto;
+	z-index: 5;
+}
+
+/* scorpio modal */
+
+#scorpio-open-modal .modal-close {
+	color: white;
+	cursor: crosshair;
+}
+
+#scorpio-open-modal .modal-close:hover {
+	color: white;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#scorpio-open-modal p {
+	color: white;
+	font-family: 'Helvetica', 'Arial';
+	font-size: 14px;
+	float: center;
+}
+
+#scorpio-open-modal .modal-window-div {
+    width: 400px;
+    height: 425px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    background: black;
+    overflow-y: visible;
+}
+
+#scorpio-open-modal object {
+	display: grid;
+	float: center;
+	width: 400px;
+	height: auto;
+	z-index: 5;
+}
+
+/* ophiuchus modal */
+
+#ophiuchus-open-modal .modal-close {
+	color: white;
+	cursor: crosshair;
+}
+
+#ophiuchus-open-modal .modal-close:hover {
+	color: white;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#ophiuchus-open-modal p {
+	color: white;
+	font-family: 'Helvetica', 'Arial';
+	font-size: 14px;
+	float: center;
+}
+
+#ophiuchus-open-modal .modal-window-div {
+    width: 400px;
+    height: 425px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    background: black;
+    overflow-y: visible;
+}
+
+#ophiuchus-open-modal object {
+	display: grid;
+	float: center;
+	width: 400px;
+	height: auto;
+	z-index: 5;
+}
+
+/* sagittarius modal */
+
+#sagittarius-open-modal .modal-close {
+	color: white;
+	cursor: crosshair;
+}
+
+#sagittarius-open-modal .modal-close:hover {
+	color: white;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#sagittarius-open-modal p {
+	color: white;
+	font-family: 'Helvetica', 'Arial';
+	font-size: 14px;
+	float: center;
+}
+
+#sagittarius-open-modal .modal-window-div {
+    width: 400px;
+    height: 425px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    background: black;
+    overflow-y: visible;
+}
+
+#sagittarius-open-modal object {
+	display: grid;
+	float: center;
+	width: 400px;
+	height: auto;
+	z-index: 5;
+}
+
+/* capricorn modal */
+
+#capricorn-open-modal .modal-close {
+	color: white;
+	cursor: crosshair;
+}
+
+#capricorn-open-modal .modal-close:hover {
+	color: white;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#capricorn-open-modal p {
+	color: white;
+	font-family: 'Helvetica', 'Arial';
+	font-size: 14px;
+	float: center;
+}
+
+#capricorn-open-modal .modal-window-div {
+    width: 400px;
+    height: 425px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    background: black;
+    overflow-y: visible;
+}
+
+#capricorn-open-modal object {
+	display: grid;
+	float: center;
+	width: 400px;
+	height: auto;
+	z-index: 5;
+}
+
+/* aquarius modal */
+
+#aquarius-open-modal .modal-close {
+	color: white;
+	cursor: crosshair;
+}
+
+#aquarius-open-modal .modal-close:hover {
+	color: white;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#aquarius-open-modal p {
+	color: white;
+	font-family: 'Helvetica', 'Arial';
+	font-size: 14px;
+	float: center;
+}
+
+#aquarius-open-modal .modal-window-div {
+    width: 400px;
+    height: 425px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    background: black;
+    overflow-y: visible;
+}
+
+#aquarius-open-modal object {
+	display: grid;
+	float: center;
+	width: 400px;
+	height: auto;
+	z-index: 5;
+}
+
+/* pisces modal */
+
+#pisces-open-modal .modal-close {
+	color: white;
+	cursor: crosshair;
+}
+
+#pisces-open-modal .modal-close:hover {
+	color: white;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#pisces-open-modal p {
+	color: white;
+	font-family: 'Helvetica', 'Arial';
+	font-size: 14px;
+	float: center;
+}
+
+#pisces-open-modal .modal-window-div {
+    width: 400px;
+    height: 425px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    background: black;
+    overflow-y: visible;
+}
+
+#pisces-open-modal object {
+	display: grid;
+	float: center;
+	width: 400px;
+	height: auto;
+	z-index: 5;
+}
+
